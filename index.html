@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!--==============Meta============================-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Commonsensical, Studio, computational creativity, generative art, data, media, Ai, Deep Learning, Machine Learning">
+    <meta name="description" content="Commonsensical is an interdisciplinary studio that explores 
+    communication and storytelling through computational creativity and generative art. 
+    We use code as a creative medium and programming as a form of artistic practice and we mainly experiment with data and Ai.">
+
+
+
+
+
+
+    <title>Commonsensical Studio</title>
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" type="image/jpg" href="assets/favicon.png"/>
+
+
+    <!---<script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>-->
+    <script src="libraries/p5.min.js"></script>
+
+
+    <!---Scrolling Text-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/customWidgets.js"></script>
+
+    <!---P5-SKETCHES-->
+    <script src="p5_sketches/logo_InstMo.js"></script>
+    <script src="p5_sketches/waves_InstMo.js"></script>
+    <script src="p5_sketches/flowfield.js"></script>
+    
+    <!--LOADING -->
+    <script>
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="loader-wrapper">
+      <h1>Commonsensical</h1>
+      <span class="loader">
+        <span class="loader-inner"></span>
+      </span>
+    </div>
+    <!--==========
+    <span id="large_circle" class="large_circle .zIndPrio-2"></span>
+    <span id="small_circle" class="small_circle .zIndPrio-2"></span>
+    ===========-->
+
+    <nav class="zIndPrio-1" id="Home">
+      <ul>
+        <li><a>Projects</a></li>
+        <li>•</li>
+        <li><a>About</a></li>
+        <li>•</li>
+        <li><a>Contact</a></li>
+      </ul>
+    </nav>
+
+    <div id="nav-responsive">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+
+
+    <div class="hero-wrapper zIndPrio-3">
+        <div class="hero">
+            <div class="vertical-line left-margins">
+              <svg id="vertical-hero-line" width="2" height="100" style="stroke:rgb(255, 255, 255);stroke-width:2">
+                <line x1="0" y1="0" x2="0" y2="100"></line>
+              </svg>
+            </div>
+
+            <div class="hero-left-tag left-margins">
+              Commonsensical
+            </div>
+
+            <div class="arrow left-margins">
+              <img src="assets/arrow.png" alt="Down arrow" id="hero-arrow">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="scrolling-text">
+      <div class="scrolling-text-left">
+        <ul>
+          <li>•</li>
+          <li>Machine learning</li>
+          <li>•</li>
+          <li>Data-driven experiments</li>
+          <li>•</li>
+          <li>Immersive media explorations</li>
+          <li>•</li>
+          <li>Deep learning</li>
+          <li>•</li>
+          <li>Data aggregation</li>
+          <li>•</li>
+          <li>Machine learning</li>
+          <li>•</li>
+          <li>Data-driven experiments</li>
+          <li>•</li>
+          <li>Immersive media explorations</li>
+          <li>•</li>
+          <li>Deep learning</li>
+          <li>•</li>
+          <li>Data aggregation</li>
+          <li>•</li>
+
+        </ul>
+      </div>
+
+
+
+      <div class="scrolling-text-right">
+        <ul>
+
+          <li>Storytelling</li>
+          <li>•</li>
+          <li>Visualizations</li>
+          <li>•</li>
+          <li>Sonifications</li>
+          <li>•</li>
+          <li>Simulations</li>
+          <li>•</li>
+          <li>Storytelling</li>
+          <li>•</li>
+          <li>Visualizations</li>
+          <li>•</li>
+          <li>Sonifications</li>
+          <li>•</li>
+          <li>Simulations</li>
+          <li>•</li>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="about-wrapper flex-direction" id="About">
+      <div class="about-text">
+          <h1>About</h1>
+          <svg class="line-about">
+            <line x1="0%" y1="0%" x2="100%" y2="0%" style="stroke: rgb(255, 255, 255);stroke-width: 5;"></line>
+          </svg>
+
+          <p>Commonsensical is an interdisciplinary studio that explores communication and storytelling through
+            computational creativity and generative art. We use code as a creative medium and programming as a
+            form of artistic practice and we mainly experiment with data and Ai.
+          </p>
+        
+      </div>
+      <div id="about-img">
+      </div>
+  </div>
+
+
+
+<!--========================================Projects========================================-->
+    <div class="project-container" id="Projects">
+
+      <h1>Projects</h1>
+      <div></div>
+
+
+
+<!--==========
+
+
+      ======================1 Project======================
+      <div class="project-item btn btn--animation-from-right">
+        <a href="#">
+          <span class="btn__text-static">
+            <div class="project-container-name-number">
+              <div class="project-container-name-number-item project-item-left">GAN Experiments</div>
+              <div class="project-container-name-number-item project-item-right">[3]</div>
+            </div>
+          </span>
+
+          <div class="btn__text-dynamic">
+              <div class="btn__text-dynamic-inner project-container-name-number">
+                <div class="project-container-name-number-item project-item-left">GAN Experiments</div>
+                <div class="project-container-name-number-item project-item-right">[3]</div>
+              </div>
+          </div>
+        </a>
+        
+      </div>
+      <div class="project-item project-image"><img src="assets/main-page-img/gans.jpg" alt="GANS"></div>
+
+      ======================2 Project======================
+      <div class="project-item btn btn--animation-from-right">
+        <a href="#">
+          <span class="btn__text-static">
+            <div class="project-container-name-number">
+              <div class="project-container-name-number-item project-item-left">Web Scrapping</div>
+              <div class="project-container-name-number-item project-item-right">[2]</div>
+            </div>
+          </span>
+
+          <div class="btn__text-dynamic">
+              <div class="btn__text-dynamic-inner project-container-name-number">
+                <div class="project-container-name-number-item project-item-left">Web Scrapping</div>
+                <div class="project-container-name-number-item project-item-right">[2]</div>
+              </div>
+          </div>
+        </a>
+        
+      </div>
+      <div class="project-item project-image"><img src="assets/main-page-img/gans.jpg" alt="GANS"></div>
+      ======================3 Project======================
+      <div class="project-item btn btn--animation-from-right">
+        <a href="#">
+          <span class="btn__text-static">
+            <div class="project-container-name-number">
+              <div class="project-container-name-number-item project-item-left">Data Mining</div>
+              <div class="project-container-name-number-item project-item-right">[1]</div>
+            </div>
+          </span>
+
+          <div class="btn__text-dynamic">
+              <div class="btn__text-dynamic-inner project-container-name-number">
+                <div class="project-container-name-number-item project-item-left">Data Mining</div>
+                <div class="project-container-name-number-item project-item-right">[1]</div>
+              </div>
+          </div>
+        </a>
+        
+      </div>
+      <div class="project-item project-image"><img src="assets/main-page-img/gans.jpg" alt="GANS"></div>
+
+
+      =============================-->
+
+  </div>
+
+  <!--========================================Contact Form========================================-->
+
+  <div class="contact-form-container zIndPrio-1" id="Contact">
+    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+    <form class="contact-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdBHKHgX5YmLdlWe0LM8svjaiJSYEuu99hoOL2sK6_BRPrSiQ/formResponse" method="POST" target="dummyframe" name="contactForm" id="contactForm">
+      <h1>Say hi 👋</h1>
+      <div class="form-element">
+        <span>Email address</span>
+        <input type="email" name="emailAddress" required>
+      </div>
+
+      <div class="form-element">
+        <span>Subject</span>
+        <input type="text" name="entry.1777482017">
+      </div>
+
+      <div class="form-element">
+        <span>Your message</span>
+        <textarea name="entry.210754817" required id="input-text"></textarea>
+      </div>
+
+      <p class="thank-you">Thanks for your message.</p>
+      <input type="submit" class="submit-button zIndPrio-1" name="submitForm" value="Send">
+    </form>
+  </div>
+
+    <!--========================================Footer========================================-->
+  <div class="footer-menu">
+    <div class="copyright">
+      <h1>Commonsensical</h1>
+      <p>© 2021</p>
+    </div>
+    <ul class="footer-menu">
+      <li><a>Home</a></li>
+      <li><a>Projects</a></li>
+      <li><a>About</a></li>
+      <li><a>Contact</a></li>
+    </ul>
+    
+    <ul class="footer-menu">
+      <li><a href="https://www.facebook.com/commonsensicalstudio/">Facebook</a></li>
+      <li><a href="https://www.instagram.com/commonsensical.studio/">Instagram</a></li>
+      <li><a href="https://www.linkedin.com/company/commonsensical">LinkedIn</a></li>
+      <li><a href="https://www.behance.net/commonsensical">Behance</a></li>
+    </ul>
+  </div>
+
+
+
+  <!--========================================Cookies========================================-->
+
+  <div class="cookie-consent-banner">
+    <div class="cookie-consent-banner__inner">
+      <div class="cookie-consent-banner__copy">
+          <img src="assets/cookie.png" class="cookie-img">
+          <div class="cookie-consent-banner__header"><h1>Sorry to bother,</h1></div>
+          <div class="cookie-consent-banner__description">We use cookies to improve your experience. By using this website you agree to our use of cookies.</div>
+      </div>
+  
+      <div class="cookie-consent-banner__actions">
+        <a class="cookie-consent-banner__cta">
+          It's ok
+        </a>
+
+      </div>
+    </div>
+  </div>
+  
+
+  </body>
+</html>
+
+
+
+

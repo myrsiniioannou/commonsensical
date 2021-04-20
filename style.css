@@ -1,0 +1,1028 @@
+/*------------------Main----------*/
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  cursor: default;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+canvas, .p5Canvas {
+  display: block;
+}
+
+
+/*------------Navigation-----------------*/
+nav a {
+  font-family: "Gilroy L";
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+
+nav a:after, .footer-menu a:after  {
+  content: "";
+  display: block;
+  width: 0;
+  border-bottom: 1px solid;
+  margin: 0 auto;
+  transition:all 0.2s linear 0s;
+}
+
+nav a:hover:after, .footer-menu a:hover:after {
+  width: 100%;
+}
+
+.footer-menu a:link, .footer-menu a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+
+/*-----Nav responsive---------*/
+#nav-responsive {
+  display: none;
+  z-index: 1000000;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  margin: 50px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  right: 0;
+  margin-top: 10vh;
+  margin-right: 10vw;
+}
+
+#nav-responsive span {
+  z-index: 100000000;
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: white;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-responsive span:nth-child(1) {
+  top: 0px;
+  z-index: 100000000;
+}
+
+#nav-responsive span:nth-child(2),
+#nav-responsive span:nth-child(3) {
+  top: 18px;
+  z-index: 100000000;
+}
+
+#nav-responsive span:nth-child(4) {
+  top: 36px;
+  z-index: 100000000;
+}
+
+#nav-responsive.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+  z-index: 100000000;
+}
+
+#nav-responsive.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: black;
+  z-index: 100000000;
+}
+
+#nav-responsive.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background-color: black;
+  z-index: 100000000;
+}
+
+#nav-responsive.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+  z-index: 100000000;
+}
+
+/*-------------------------*/
+
+
+.large_circle {
+	position: absolute;
+  border: solid 1px #ccc;
+	width: 30px; 
+	height: 30px; 
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.small_circle{ 
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 1000;
+}
+
+.zIndPrio-1 {
+  z-index: 10000;
+}
+
+.zIndPrio-2 {
+  z-index: 100;
+}
+
+.zIndPrio-3 {
+  z-index: 10;
+}
+
+.zIndPrio-4 {
+  z-index: 1;
+}
+
+@font-face {
+  font-family: "Gilroy EB";
+  src: url("assets/Gilroy-ExtraBold.otf");
+}
+
+@font-face {
+  font-family: "Gilroy L";
+  src: url("assets/Gilroy-Light.otf");
+}
+
+#logo {
+  display: block;
+  position: absolute;
+  top: 4.8vh;
+  left: 5%;
+  z-index: 10000;
+  
+}
+
+
+::-moz-selection { /* Code for Firefox */
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+}
+
+::selection {
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+}
+
+/*-------Navigation----------*/
+
+nav {
+  position: absolute;
+  width: 100%;
+  background-color:transparent;
+  margin: auto;
+  right: 7.5%;
+  padding-top:  11vh;
+}
+
+nav ul {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  font-family: "Gilroy L";
+  color: #fff;
+  font-size: 1.2em;
+  list-style-type: none;
+  flex-basis: 3em;
+  text-align: center;
+}
+
+
+/*------------------HERO----------*/
+
+#waves {
+  margin: auto;
+  padding: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 10;
+}
+
+.main-margins {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.hero-wrapper {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 95%;
+  border: 0px;
+  top: 0;
+}
+
+.hero {
+  position: absolute;
+  width: 100%;
+  background-color: black;
+  height: 95%;
+  margin: auto;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+
+
+.left-margins {
+  margin-left: 2%;
+}
+
+.vertical-line {
+  align-self: flex-start;
+  padding-left: 0.6em;
+  flex-grow: 0.25;
+}
+
+.hero-left-tag {
+  flex-grow: 0.1;
+  color: #fff;
+  font-family: "Gilroy L";
+  font-size: 1em;
+  align-self: flex-start;
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+  /* Legacy vendor prefixes that you probably don't need... */
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+  /* IE */
+  -ms-transform: rotate(-90deg);
+  /* Opera */
+  -o-transform: rotate(-90deg);
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.arrow {
+  align-self: flex-start;
+  -webkit-animation: MoveUpDown 1s linear infinite;
+  animation: MoveUpDown 1s linear infinite;
+  width: 2%;
+  width: 1.2em;
+  padding-left: 0.05em;
+  padding-bottom: 2%;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+#hero-arrow {
+  width: 100%;
+  /*--
+  margin-left: -16%;
+  ------*/
+}
+
+/*--------*/
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30%);
+  }
+}
+
+
+
+/*----------Scrolling Text------------*/
+
+
+
+
+.scrolling-text {
+  width: 100%;
+  background-color: white;
+  margin: auto;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  margin: 5% 0;
+}
+
+
+.scrolling-text::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
+}
+
+.scrolling-text ul {
+  margin: 0;
+  white-space: nowrap;
+  padding: 0;
+}
+
+.scrolling-text ul li {
+  font-family: "Gilroy L";
+  font-weight: bolder;
+  color:black;
+  font-size: 4em;
+  list-style-type: none;
+  text-align: center;
+  display: inline-block;
+  margin: 0 1% 0;
+}
+
+.scrolling-text-left, .scrolling-text-right {
+  transition: all 0.8s ease;
+}
+
+.scrolling-text-right {
+  float: right;
+  margin-top: 2%;
+}
+
+
+/*--------------------------------About---*/
+.about-wrapper{
+  display:inline-flex;
+  flex-wrap:wrap;
+  width: 100%;
+  height: 100%;
+}
+.flex-direction{
+  flex-direction:row;
+}
+.about-text{
+  background-color:black;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-text h1 {
+  font-family: "Gilroy EB";
+  color: white;
+  font-size: 4em;
+  height: auto;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  margin-top: 0;
+}
+
+
+.about-text p {
+  color: #fff;
+  font-family: "Gilroy L";
+  font-size: 2em;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  text-align: -webkit-left;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.line-about {
+  margin-left: 8vw;
+  margin-right: 8vw;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 2%;
+  width: 70%;
+}
+
+#about-img{
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+
+/*--------------------Projects------------*/
+.project-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: black;
+  padding: 8vw;
+  padding-top: 20vh;
+  padding-bottom: 40vh;
+  border-top: 1px solid white;
+
+}
+.project-item {
+  border-left: none;
+  border-right: none;
+  font-family: "Gilroy L";
+  color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 3vh;
+  font-size: 2em;
+  text-align: center;
+  z-index: 10000;
+}
+
+.project-container h1 {
+  font-family: "Gilroy EB";
+  color: white;
+  font-size: 4em;
+}
+
+.project-image {
+  border: none;
+  height: 0;
+  visibility: hidden;
+}
+.active {
+  visibility: visible;
+  -webkit-animation: projectMove 0.3s ease-in-out normal;
+  animation: projectMove 0.3s ease-in-out normal;
+}
+
+
+@keyframes projectMove {
+  0% {
+    transform: translateX(-50%) rotate(30deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+  }
+}
+
+.project-item img {
+  width: 24vw;
+  float: right;
+}
+
+
+.project-container-name-number {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+
+.project-container-name-number-item {
+  text-align: center;
+}
+
+.project-item-left {
+  text-align: left;
+}
+
+.project-item-right {
+  text-align: right;
+}
+
+.project-container a:link {
+  text-decoration: none;
+  color: black;
+}
+.project-container a:visited {
+  color: black;
+}
+/*-------------Project Hover------------------------------*/
+
+.btn {
+  position: relative;
+  color: black;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn .btn__text-dynamic,
+.btn .btn__text-dynamic-inner {
+  /*----------
+  display: flex;
+  justify-content: center;
+  ---------*/
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all ease 0.5s;
+}
+.btn .btn__text-dynamic {
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+.btn:hover .btn__text-dynamic {
+  transform: translateX(-100%);
+}
+.btn:hover .btn__text-dynamic-inner {
+  transform: translateX(100%);
+}
+
+.btn--animation-from-right:hover .btn__text-dynamic {
+  transform: translateX(100%);
+}
+.btn--animation-from-right:hover .btn__text-dynamic-inner {
+  transform: translateX(-100%);
+}
+
+
+
+
+
+/*------------------------Contact Form----------------*/
+
+.contact-form-container {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  color: black;
+}
+
+.contact-form{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.form-element {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  font-family: "Gilroy L";
+  font-size: 1.25em;
+  margin-bottom: 5vh;
+}
+
+.thank-you {
+  display: none;
+  font-family: "Gilroy L";
+  font-size: 2em;
+}
+
+.active {
+  display:initial;
+}
+
+.contact-form-container h1 {
+  font-family: "Gilroy EB";
+  color: black;
+  font-size: 4em;
+  white-space: nowrap;
+  margin: 0;
+  margin-bottom: 4vh;
+}
+
+input {
+  font-family: "Gilroy L";
+  font-size: 1em;
+}
+
+.submit-button {
+  width: 5em;
+  font-size: 11px;
+  color: white;
+  background-color: black;
+  border-radius: 1em;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 4px 7px black;
+  transition: all 0.3s ease 0s;
+  font-family: "Gilroy L";
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.submit-button:hover {
+  background-color: white;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px black;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#input-text{
+  height: 10vw;
+}
+
+textarea {
+  font-family: "Gilroy L";
+  font-size: 1em;
+}
+
+
+
+/*-------------------FOOTER-----------------------*/
+.footer-menu {
+  width: 100%;
+  height: 50vh;
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  font-family: "Gilroy L";
+  font-size: 1.2em;
+}
+
+.footer-menu ul {
+  grid-template-columns: auto;
+  margin: 0;
+  display: grid;
+  list-style: none;
+  padding: 0;
+  justify-items: flex-start;
+  margin: auto;
+  height: 50%;
+  width: 50%;
+}
+
+.footer-menu ul li a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.copyright {
+  justify-self: center;
+  width: 50%;
+  margin: auto;
+}
+
+
+.footer-menu h1 {
+  font-family: "Gilroy EB";
+  font-size: 2em;
+}
+
+
+/*-----------Loader-------------*/
+
+.loader-wrapper {
+  z-index: 100000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-wrapper h1 {
+  color: white;
+  font-family: "Gilroy EB";
+  color: white;
+  font-size: 4em;
+  padding: 0 3vw;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 1px solid #Fff;
+  -webkit-animation: loader 2s infinite ease;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  -webkit-animation: loader-inner 2s infinite ease-in;
+  animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
+}
+
+
+
+
+
+
+
+/*-------------Error Page------------*/
+.error {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.error p {
+  color: white;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Gilroy EB";
+  font-size: 2em;
+}
+.error a {
+  text-decoration: none;
+}
+
+.error a:link,.error a:visited {
+  color: white;
+}
+
+.error a:hover {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+
+
+/*-------------Cookies------------------*/
+.cookie-consent-banner {
+  display: none;
+  font-family: "Gilroy L";
+  color: black;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 2147483645;
+  box-sizing: border-box;
+  width: 30%;
+  background-color: white;
+  font-size: 1.25em;
+}
+
+.cookie-consent-banner__inner {     
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.cookie-consent-banner__copy { 
+  display: flex;
+  flex-direction: column;
+  padding: 0vh 2vw 4vh 2vw
+}
+
+
+.cookie-consent-banner__header {
+  font-family: "Gilroy EB";
+  color: black;
+  font-size: 2em;
+}
+
+.cookie-consent-banner__description {
+  font-family: "Gilroy L";
+  font-weight: normal;
+  color: black;
+}
+
+.cookie-consent-banner__cta {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 164px;
+  padding: 11px 13px;
+  border-radius: 2px;
+  background-color: black;
+  border: 1px solid black;
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+}
+
+.cookie-consent-banner__cta--secondary { 
+  background-color: transparent;
+  color: black
+}
+
+.cookie-consent-banner__cta:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+
+.cookie-img {
+  width: 6em;
+}
+
+.cookie-consent-banner__header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*--------Transitions---------*/
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.in-view {
+  display: none;
+  animation: slideInFromLeft 1s ease-in-out normal;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*--------------------Media queries------------*/
+
+@media screen and (max-width: 1200px) {
+  .about-text p {
+    font-size: 1.5em;
+  }
+  .contact-form {
+    width: 40%;
+  }
+  .cookie-consent-banner {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 767px) {
+
+  .contact-form {
+    width: 55%;
+  }
+  .open {
+    z-index: 1000000;
+  }
+  #nav-responsive {
+    display: initial;
+    z-index: 100000000;
+  }
+
+  .visibility {
+    display: initial;
+    -webkit-animation: slideInFromTop 0.5s ease-in-out normal;
+    animation: slideInFromTop 0.5s ease-in-out normal;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    padding: 0;
+    margin: 0;
+    right: 0;
+  }
+  nav a:hover:after {
+    width: 15%;
+  }
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+  }
+
+  nav ul li {
+    font-size: 2em;
+    flex-basis: 0;
+}
+  nav ul li a{
+    color: black;
+    font-weight: bolder;
+  }
+
+  .footer-menu a:hover:after {
+    width: 100%;
+  }
+
+  .flex-direction{
+    flex-direction:column;
+  }
+  .about-text{
+    width: 100%;
+    height: 70%;
+
+  }
+
+  .about-text p, .footer-menu p, .footer-menu ul li a {
+    font-size: 1.25em;
+  }
+  #about-img{
+    width: 100%;
+    height: 30%;
+  }
+
+  .vertical-line, .hero-left-tag, .arrow {
+    display: none;
+  }
+
+  .project-item {
+    font-size: 1.25em;
+  }
+  .project-item img {
+    width: 30vw;
+  }
+
+  .footer-menu h1, .footer-menu {
+    font-size: 1em;
+  }
+  
+  .cookie-consent-banner {
+    width: 100%;
+    height: 60%;
+  }
+}
