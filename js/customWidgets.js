@@ -34,16 +34,29 @@ $(document).ready(function () {
 
 $(window).on("load", function(){
     $(".loader-wrapper").fadeOut("slow");
-    setTimeout(function(){
-        // Display the div containing the class "bottomdiv"
-        $(".cookie-consent-banner").show();
-        }, 500);
+
 
 })
+
  
 $(document).ready(function () {
 
     //Cookie popup
+
+
+    if ($.cookie('noShowWelcome')){
+
+    }
+    else {
+        setTimeout(function(){
+            // Display the div containing the class "bottomdiv"
+            $(".cookie-consent-banner").show();
+        }, 500);
+        $.cookie('noShowWelcome', true);  
+
+    }
+
+
     $('.cookie-consent-banner__actions').click(function() {
         $('.cookie-consent-banner').css("display","none");
       });
@@ -121,10 +134,20 @@ $(document).ready(function () {
 
 });
 
-$(window).resize( function() {
 
-  window.location.href = window.location.href;
-  
+
+
+
+
+
+$(window).resize( function() {
+    var width = $(window).width();
+
+    if (width>=1000) {
+        window.location.href = window.location.href;
+        console.log('works')
+    }
+
 });
 
 
