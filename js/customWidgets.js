@@ -42,8 +42,6 @@ $(window).on("load", function(){
 $(document).ready(function () {
 
     //Cookie popup
-
-
     if ($.cookie('noShowWelcome')){
 
     }
@@ -76,7 +74,6 @@ $(document).ready(function () {
             'transform' : 'translate('+wScroll_1+'px)'
         });
 
-        
 
         $('.scrolling-text-right').css({
             'transform' : 'translate('+wScroll_2+'px)'

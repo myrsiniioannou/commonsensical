@@ -19,15 +19,6 @@ const logoSketch = s1 => {
 
     s1.setup = function() {
 
-        //Is this mobile? -->for the pixelDensity thingy
-        $(document).ready(function(){
-            var isMobile = false;
-            if(window.matchMedia("(max-width: 767px)").matches){
-                isMobile = true;
-                s1.pixelDensity(1);
-            }
-        });
-        
         points = s1.font.textToPoints('c', 0, 0, logo_size, {
             sampleFactor: 5,
             simplifyThreshold: 0

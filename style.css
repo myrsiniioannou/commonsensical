@@ -967,8 +967,8 @@ textarea {
     margin: 0;
     right: 0;
   }
-  nav a:hover:after {
-    width: 15%;
+  nav ul li a:hover:after {
+    width: 20%;
   }
   nav ul {
     flex-direction: column;

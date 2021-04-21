@@ -15,17 +15,6 @@ const sketch2 = s2 => {
 
     s2.setup = function() {
         
-        //Is this mobile? -->for the pixelDensity thingy
-        $(document).ready(function(){
-            var isMobile = false;
-            if(window.matchMedia("(max-width: 767px)").matches){
-                isMobile = true;
-                s2.pixelDensity(1);
-            }
-        });
-
-
-
         let cnv = s2.createCanvas(s2.windowWidth*0.85, s2.windowHeight*0.95);
         s2.frameRate(fr);
         cnv.id('waves');
