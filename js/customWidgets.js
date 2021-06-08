@@ -65,6 +65,13 @@ $(document).ready(function () {
       $("nav").toggleClass("visibility");
     });
 
+
+    //Text scrolling
+    $('.scrolling-text-right').css({
+      'transform' : 'translate(-1000px)'
+    });
+
+
     // SCROLLING TEXT SECTION
     $(window).scroll(function () {
         var wScroll_1 = -$(this).scrollTop();
@@ -73,10 +80,9 @@ $(document).ready(function () {
         $('.scrolling-text-left').css({
             'transform' : 'translate('+wScroll_1+'px)'
         });
-
-
+        var right_scroll = -1000+wScroll_2;
         $('.scrolling-text-right').css({
-            'transform' : 'translate('+wScroll_2+'px)'
+             'transform' : 'translate('+right_scroll+'px)'
         });
     });
 
@@ -87,6 +93,8 @@ $(document).ready(function () {
         $('html, body').animate({
            scrollTop: $('#' + targetSec).offset().top
         }, 600);
+        $('#nav-responsive').toggleClass('open');
+        $("nav").toggleClass("visibility");
     
     });
 
