@@ -201,7 +201,7 @@ nav a:hover:after, .footer-menu a:hover:after {
 }
 
 #logo-mob img{
-  width: 30vw;
+  width: 20vw;
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -270,6 +270,8 @@ nav ul li {
 #waves-mob img{
   object-fit: contain;
   max-height: 95%;
+  margin: auto;
+  display: block;
 }
 .main-margins {
   margin-left: 10%;
@@ -928,7 +930,7 @@ textarea {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  justify-content: center;
+  justify-content: normal;
 }
 
 .project-wrapper h1 {
@@ -1079,6 +1081,10 @@ textarea {
   }
   .project-wrapper {
     margin: 20vh 0 30vh 0;
+  }
+
+  .project-wrapper h1 {
+    margin-top: 12vh;
   }
 }
 
