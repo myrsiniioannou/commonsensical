@@ -1025,9 +1025,20 @@ textarea {
 }
 .project-img img {
   display: block;
-  max-height:60%;
+  max-height:100%;
   width: auto;
   height: auto;
+}
+
+
+.generative-experiments {
+  display: flex;
+  justify-content: center;
+  margin: 4em 0em;
+}
+
+.generative-experiments img {
+  width: 50%;
 }
 /*--------Transitions---------*/
 
@@ -1110,15 +1121,12 @@ textarea {
     max-height: initial;
   }
 
+
 }
 
 
 
 @media screen and (max-width: 767px) {
-  .project-wrapper{
-    height: 200vh;
-    margin: 0 0 20vh 0vh;
-  }
 
 
   .loader-wrapper h1 {
@@ -1270,6 +1278,10 @@ textarea {
     font-size: 1em;
   }
 
+  .project-wrapper h1 {
+    font-size: 3em;
+  }
+
   .scrolling-text ul li {
     font-size: 7em;
   }
@@ -1279,5 +1291,9 @@ textarea {
   }
   #logo-mob, #waves-mob{
     display: initial;
+  }
+
+  .generative-experiments img {
+    width: 100%;
   }
 }
