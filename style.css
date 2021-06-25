@@ -272,6 +272,7 @@ nav ul li {
   max-height: 95%;
   margin: auto;
   display: block;
+  width: 100%;
 }
 .main-margins {
   margin-left: 10%;
@@ -1304,5 +1305,11 @@ textarea {
 
   .project-wrapper .flex-direction .botshevic {
     height: 170vh;
+  }
+  .project-container{
+    grid-template-columns: auto;
+  }
+  .project-image {
+    display: none;
   }
 }
