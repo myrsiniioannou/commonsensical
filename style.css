@@ -919,7 +919,7 @@ textarea {
   flex-wrap:wrap;
   width: 100%;
   height: 100%;
-  margin: 10vh 0 30vh 0;
+  margin: 10vh 0 20vh 0;
   flex-direction: row;
 }
 
@@ -1103,7 +1103,7 @@ textarea {
   .project-wrapper{
     flex-direction:column;
     flex-wrap: wrap;
-    height: 140vh;
+    height: 170vh;
     margin: 0 0 30vh 0;
   }
 
@@ -1272,6 +1272,11 @@ textarea {
 
   .project-img img {
     width: 100%;
+    align-self: flex-end;
+  }
+
+  .project-img.botshevic-img img{
+    align-self: auto;
   }
 
   .project-text p {
@@ -1295,5 +1300,9 @@ textarea {
 
   .generative-experiments img {
     width: 100%;
+  }
+
+  .project-wrapper .flex-direction .botshevic {
+    height: 170vh;
   }
 }
