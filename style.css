@@ -1279,10 +1279,6 @@ textarea {
     align-self: auto;
   }
 
-  .project-img.generative-experiment-img img{
-    margin-bottom: 5em;
-  }
-
   .project-text p {
     font-size: 1em;
   }
