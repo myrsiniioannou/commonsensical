@@ -1036,6 +1036,7 @@ textarea {
   display: flex;
   justify-content: center;
   margin: 4em 0em;
+  width: 100%;
 }
 
 .generative-experiments img {
@@ -1305,9 +1306,6 @@ textarea {
     width: 100%;
   }
 
-  .project-wrapper .flex-direction .botshevic {
-    height: 170vh;
-  }
   .project-container{
     grid-template-columns: auto;
   }
